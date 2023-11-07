@@ -13,5 +13,5 @@ function rainAmount(mm){
          return "Your plant has had more than enough water for today!"
     };
 }
-//console.log(rainAmount(100));
+console.log(rainAmount(100));
 console.log(rainAmount(39));
