@@ -13,7 +13,13 @@ The first argument can be an empty string
 In languages with no distinct character data type, 
 the second argument will be a string of length 1*/
 function strCount(str, letter){  
-    return str.split(letter).length-1;
+    //return str.split(letter).length-1;
+   let count = 0;
+   for(let i=0; i<=str.length; i++){
+    if (str.charAt(i)==letter){
+        count=count+1}
+   }
+    return count;
 }
 console.log(strCount('Hello', 'o')); // 1
 console.log(strCount('Hello', 'l')); // 2
