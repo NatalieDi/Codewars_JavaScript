@@ -1,12 +1,12 @@
 var filterString = function(value) {
-    let result ='';
-    for (let i = 0; i<value.length;i++){
-        if (value.charAt(i) == isNaN()){
-            result= result +value.charAt(i);
-            i++;
-        };
+    let result = '';
+    for (let i = 0; i < value.length; i++) {
+        if (0 <= value.charAt(i) && value.charAt(i) <= 9) {
+            result = result + value.charAt(i)
+        }
     }
+    return parseInt(result)
+  }
 
-    return parseInt(result) //int ("".join(re.findall(r'\d',value)))
-    }
+  console.log(filterString('aa1bb2cc3dd9'));//1239
     console.log(filterString("aa1bb2cc3dd")) //123
