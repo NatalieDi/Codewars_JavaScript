@@ -3,7 +3,11 @@
 //Write a function that checks if a given string (case insensitive) is a palindrome.
 //A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
 function isPalindrome(x) {
-    return x.split("").reverse().join("").toLowerCase()=== x.toLowerCase()
+    for (let i=0; i< x.length;i++){
+        if(x.at(i)!=x.at(x.length)){return false}
+    }
+    return true;
+    //return x.split("").reverse().join("").toLowerCase()=== x.toLowerCase()
 }
 console.log(isPalindrome("a"));
 console.log(isPalindrome("aba"));
